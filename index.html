@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swastik - Premium Puja Kits</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+  <!-- Custom Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'gold': '#D4AF37', // Golden yellow
+            'maroon': '#800000', // Maroon for accents
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gray-100">
+
+   <!-- Discount bar above the header  -->
+  <div class="bg-yellow-600 text-white text-center text-sm py-1">
+    Special Discounted Prices on 🔔 Bulk Orders
+  </div>
+  
+
+  <!-- Header -->
+  <header class="bg-yellow-100 shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="images/swastiklogo.png" class="w-16 h-16 mr-6" alt="Swastik Logo">
+        <span class="text-2xl font-bold text-yellow-800">Swastik</span>
+      </div>
+      <!-- Navigation Menu -->
+      <nav class="hidden md:flex space-x-12">
+        <a href="#home" class="text-gray-700 hover:text-gold">Home</a>
+        <a href="#products" class="text-gray-700 hover:text-gold">Products</a>
+        <a href="#about" class="text-gray-700 hover:text-gold">About Us</a>
+        <a href="#contact" class="text-gray-700 hover:text-gold">Contact</a>
+        
+          <!-- Search Icon -->
+          <button class="text-gray-700 hover:text-gold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+        </div>
+        
+      </nav>
+      <!-- Mobile Menu Button -->
+
+      <button class="md:hidden p-2 rounded bg-yellow-600 text-white" onclick="toggleMenu()">
+        ☰
+      </button>
+      
+    </div>
+
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-white p-4">
+      <a href="#home" class="block text-gray-700 hover:text-gold">Home</a>
+      <a href="#products" class="block text-gray-700 hover:text-gold">Products</a>
+      <a href="#about" class="block text-gray-700 hover:text-gold">About Us</a>
+      <a href="#contact" class="block text-gray-700 hover:text-gold">Contact</a>
+      
+
+
+
+          <!-- Search Icon -->
+           
+          <button class="text-gray-700 hover:text-gold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg> 
+          </button> 
+        </div>
+        
+    </nav>
+  </header>
+
+ 
+
+ 
+    <!-- Hero Section with Swiper.js -->
+  <section class="relative h-screen">
+    <!-- Swiper Container -->
+    <div class="swiper-container h-full">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="absolute inset-0">
+            <img src="/swastikBanner.png" class="w-full h-full object-cover" alt="Swastik Banner 1">
+            <div class="absolute inset-0 bg-black bg-opacity-10"></div> <!-- Overlay for better text visibility -->
+          </div>
+          <div class="container mx-auto px-6 text-center relative z-10 flex items-center justify-center h-full">
+            
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="absolute inset-0">
+            <img src="/banner.png" class="w-full h-full object-cover" alt="Swastik Banner 2">
+            <div class="absolute inset-0 bg-black bg-opacity-10"></div> <!-- Overlay for better text visibility -->
+          </div>
+          <div class="container mx-auto px-6 text-center relative z-10 flex items-center justify-center h-full">
+            
+          </div>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <!-- Add Pagination and Navigation Arrows -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next text-white"></div>
+      <div class="swiper-button-prev text-white"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true, // Infinite loop
+      autoplay: {
+        delay: 4000, // Change slide every 3 seconds
+        disableOnInteraction: false, // Continue autoplay even when user interacts
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+  </div>
+</section>
+  </div>
+
+
+
+  <!-- Smooth Scroll Arrow -->
+  <a href="#products" class="absolute bottom-10 animate-bounce">
+    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </a>
+</section>
+
+
+
+  <!-- Product Categories Section -->
+<section id="products" class="container mx-auto px-6 py-12">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Product Categories</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+
+
+    <!-- Product 1: Diwali Puja Kit -->
+    <a href="Diwali.html">  <!-- This line  for link two pages  -->
+
+    <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition transform hover:-translate-y-2">
+      <img src="/pujaKit.jpeg" class="w-full h-48 object-cover" alt="Diwali Puja Kit">
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800">Diwali Puja Kits</h3>
+        <p class="text-gray-600 mt-2">Complete kits for Diwali celebrations.</p>
+      </div>
+    </div>
+    </a>
+
+
+
+    <!-- Product 2: Ganesh Chaturthi Kit -->
+    <a href="Ganesh.html">  <!-- This line  for link two pages  -->
+
+
+    <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition transform hover:-translate-y-2">
+      <img src="/Ganesh.png" class="w-full h-48 object-cover" alt="Ganesh Chaturthi Kit">
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800">Ganesh Chaturthi Kits</h3>
+        <p class="text-gray-600 mt-2">Everything you need for Ganesh Puja.</p>
+      </div>
+    </div>
+    </a>
+
+
+
+    <!-- Product 3: Satyanarayan Puja Kit -->
+    <a href="satyanarayan.html">  <!-- This line  for link two pages  -->
+    
+    <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition transform hover:-translate-y-2">
+      <img src="/satyanarayan.png" class="w-full h-48 object-cover" alt="Satyanarayan Puja Kit">
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800">Satyanarayan Puja Kits</h3>
+        <p class="text-gray-600 mt-2">Complete kits for Satyanarayan Puja.</p>
+      </div>
+    </div>
+    </a>
+
+
+
+    <!-- Product 4: Krishna Hands Puja Kit -->
+    <a href="Krishana.html">  <!-- This line  for link two pages  -->
+    
+    <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition transform hover:-translate-y-2">
+      <img src="/Krishna.png" class="w-full h-48 object-cover" alt="Krishna Hands Puja Kit">
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800">Lord Krishna's Divine Hands Idol</h3>
+        <p class="text-gray-600 mt-2">Perfect for Gifting.</p>
+      </div>
+    </div>
+    </a>
+
+
+
+    <!-- Product 5: Vishnu Idol -->
+    <a href="Vishnu.html">  <!-- This line  for link two pages  -->
+
+    <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition transform hover:-translate-y-2">
+      <img src="/Vishnu1.png" class="w-full h-48 object-cover" alt="Vishnu Idol">
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800">Lord Vishnu Idol</h3>
+        <p class="text-gray-600 mt-2">Perfect for Gifting.</p>
+      </div>
+    </div>
+    </a>
+
+
+
+    <!-- Product 6: Shiva Idol -->
+     <a href="Shiva.html">  <!-- This line  for link two pages  -->
+
+
+    <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition transform hover:-translate-y-2">
+      <img src="/Shiva.png" class="w-full h-48 object-cover" alt="Shiva Idol">
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-800">Lord Shiva Dhyana Mudra Murti</h3>
+        <p class="text-gray-600 mt-2">Perfect for Gifting.</p>
+      </div>
+  </div>
+     </a>
+</section>
+
+
+
+
+
+  
+
+  <!-- About Us Section -->
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">About Swastik</h2>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+          <p class="text-gray-600">
+            Swastik is dedicated to providing premium-quality Puja kits that make religious rituals simple and accessible. Our kits include everything you need, delivered right to your doorstep.
+          </p>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0">
+          <img src="/swast" class="w-full rounded-lg" alt="About Us Image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.instagram.com/swastik_puja.hub/" class="text-gray-400 hover:text-gold">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61566814890703" class="text-gray-400 hover:text-gold">Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-gold">Twitter</a>
+      </div>
+      <p class="text-gray-400 mt-4">© 2025 Swastik. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
