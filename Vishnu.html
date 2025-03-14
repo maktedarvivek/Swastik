@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Swastik</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'gold': '#D4AF37', // Golden yellow
+            'maroon': '#800000', // Maroon for accents
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-yellow-100 shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="/swastiklogo.png" class="w-16 h-16 mr-6" alt="Swastik Logo">
+        <span class="text-2xl font-bold text-yellow-800">Swastik</span>
+      </div>
+      <!-- Navigation Menu -->
+      <nav class="hidden md:flex space-x-12">
+        <a href="#home" class="text-gray-700 hover:text-gold">Home</a>
+        <a href="#products" class="text-gray-700 hover:text-gold">Products</a>
+        <a href="#about" class="text-gray-700 hover:text-gold">About Us</a>
+        <a href="#contact" class="text-gray-700 hover:text-gold">Contact</a>
+        <!-- Search Icon -->
+        <button class="text-gray-700 hover:text-gold">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 rounded bg-yellow-600 text-white" onclick="toggleMenu()">
+        ☰
+      </button>
+    </div>
+    <!-- Mobile Menu (Hidden by Default) -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-white p-4">
+      <a href="#home" class="block text-gray-700 hover:text-gold">Home</a>
+      <a href="#products" class="block text-gray-700 hover:text-gold">Products</a>
+      <a href="#about" class="block text-gray-700 hover:text-gold">About Us</a>
+      <a href="#contact" class="block text-gray-700 hover:text-gold">Contact</a>
+      <!-- Search Icon -->
+      <button class="text-gray-700 hover:text-gold">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Product Details Section -->
+  <section class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Product Images -->
+      <div>
+        <!-- Main Image -->
+        <div class="mb-4">
+          <img id="mainImage" src="/Vishnu1.png" class="w-full rounded-lg shadow-lg" alt="Product Main Image">
+        </div>
+        <!-- Thumbnails -->
+        <div class="grid grid-cols-4 gap-4">
+          <div>
+            <img src="/Vishnu1.png" class="w-full rounded-lg cursor-pointer" alt="Thumbnail 1" onclick="changeImage('/Vishnu1.png')">
+          </div>
+          <div>
+            <img src="/Vishnu2.png" class="w-full rounded-lg cursor-pointer" alt="Thumbnail 2" onclick="changeImage('/Vishnu2.png')">
+          </div>
+          
+          <div>
+            <img src="/Vishnu3.png" class="w-full rounded-lg cursor-pointer" alt="Thumbnail 4" onclick="changeImage('/Vishnu3.png')">
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div>
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Lord Vishnu Standing Antique Idol (12 Inch)</h1>
+        <p class="text-2xl text-gray-600 mb-4">₹1,800 <span class="text-sm text-gray-400 line-through">₹2,499</span></p>
+        <p class="text-gray-600 mb-6">
+          Enhance the spiritual aura of your home with this beautifully crafted Lord Vishnu idol. Designed with intricate details and vibrant colors, this sacred statue symbolizes protection, wisdom, and prosperity. Ideal for home altars, temples, or as a thoughtful gift, it brings peace, positivity, and divine energy to any space.
+        </p>
+        
+        
+          <!-- Quantity Section -->
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-700">Quantity</span>
+            <div class="flex items-center border border-gray-300 rounded-lg">
+              <button class="px-3 py-1 text-gray-700 hover:bg-gray-100 rounded-l-lg">-</button>
+              <input type="number" value="1" class="w-12 text-center border-0 focus:ring-0" min="1">
+              <button class="px-3 py-1 text-gray-700 hover:bg-gray-100 rounded-r-lg">+</button>
+            </div>
+          </div>
+        
+          <div class="flex space-x-4 mt-4">
+            <div class="mt-4">
+              <!-- Add to Cart Button (Maroon Border) -->
+              <button class="w-full px-6 py-2 border-2 border-maroon text-maroon font-semibold rounded-lg hover:bg-maroon hover:text-white transition duration-300 mb-4">
+                ADD TO CART
+              </button>
+            
+              <!-- Buy Now Button (Gold Background) -->
+              <button class="w-full px-12 py-3 bg-gold text-white font-semibold rounded-lg hover:bg-yellow-600 transition duration-300">
+                BUY NOW
+              </button>
+            </div>
+        
+          <!-- Estimated Delivery Time -->
+          <p class="text-gray-600 ">
+            Estimated Delivery Time: 3-5 business days
+          </p>
+        </div>
+      
+    </div>
+  </section>
+
+  <!-- Related Products Section -->
+  <section class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Related Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Related Product 1 -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+        <img src="/Vishnu.png" class="w-full h-48 object-cover rounded-lg" alt="Related Product 1">
+        <h3 class="text-xl font-bold mt-4">Lord Vishnu Murti</h3>
+        <p class="text-gray-600 mt-2">₹999</p>
+      </div>
+      <!-- Related Product 2 -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+        <img src="/related-product2.jpg" class="w-full h-48 object-cover rounded-lg" alt="Related Product 2">
+        <h3 class="text-xl font-bold mt-4">Lord Krishna Murti</h3>
+        <p class="text-gray-600 mt-2">₹1,299</p>
+      </div>
+      <!-- Related Product 3 -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+        <img src="/related-product3.jpg" class="w-full h-48 object-cover rounded-lg" alt="Related Product 3">
+        <h3 class="text-xl font-bold mt-4">Goddess Lakshmi Murti</h3>
+        <p class="text-gray-600 mt-2">₹1,199</p>
+      </div>
+      <!-- Related Product 4 -->
+      <div class="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+        <img src="/related-product4.jpg" class="w-full h-48 object-cover rounded-lg" alt="Related Product 4">
+        <h3 class="text-xl font-bold mt-4">Lord Hanuman Murti</h3>
+        <p class="text-gray-600 mt-2">₹899</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="text-gray-400 hover:text-gold">Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-gold">Instagram</a>
+        <a href="#" class="text-gray-400 hover:text-gold">Twitter</a>
+      </div>
+      <p class="text-gray-400 mt-4">© 2025 Swastik. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Image Switcher -->
+  <script>
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
