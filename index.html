@@ -109,7 +109,7 @@
 
  
     <!-- Hero Section with Swiper.js -->
-  <section class="relative h-screen">
+  <section class="relative h-screen hero-section">
     <!-- Swiper Container -->
     <div class="swiper-container h-full">
       <div class="swiper-wrapper">
@@ -117,20 +117,24 @@
         <div class="swiper-slide">
           <div class="absolute inset-0">
             <img src="images/swastikBanner.png" class="w-full h-full object-cover" alt="Swastik Banner 1">
-            <div class="absolute inset-0 bg-black bg-opacity-10"></div> <!-- Overlay for better text visibility -->
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div> <!-- Overlay for better text visibility -->
           </div>
-          <div class="container mx-auto px-6 text-center relative z-10 flex items-center justify-center h-full">
-            
+          <div class="container mx-auto px-6 text-center relative z-10 flex flex-col items-center justify-center h-full">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Svastika's Finely Detailed Brass Idol Range</h1>
+            <p class="text-lg md:text-xl text-white mb-8">Much-Avoided BRASS PERFECTION</p>
+            <a href="#products" class="bg-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-maroon transition duration-300">SHOP NOW</a>
           </div>
         </div>
         <!-- Slide 2 -->
         <div class="swiper-slide">
           <div class="absolute inset-0">
             <img src="images/banner.png" class="w-full h-full object-cover" alt="Swastik Banner 2">
-            <div class="absolute inset-0 bg-black bg-opacity-10"></div> <!-- Overlay for better text visibility -->
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div> <!-- Overlay for better text visibility -->
           </div>
-          <div class="container mx-auto px-6 text-center relative z-10 flex items-center justify-center h-full">
-            
+          <div class="container mx-auto px-6 text-center relative z-10 flex flex-col items-center justify-center h-full">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Premium Puja Kits for Every Occasion</h1>
+            <p class="text-lg md:text-xl text-white mb-8">Complete kits for all your religious needs</p>
+            <a href="#products" class="bg-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-maroon transition duration-300">SHOP NOW</a>
           </div>
         </div>
         <!-- Add more slides as needed -->
@@ -149,7 +153,7 @@
     const swiper = new Swiper('.swiper-container', {
       loop: true, // Infinite loop
       autoplay: {
-        delay: 4000, // Change slide every 3 seconds
+        delay: 4000, // Change slide every 4 seconds
         disableOnInteraction: false, // Continue autoplay even when user interacts
       },
       pagination: {
@@ -162,6 +166,7 @@
       },
     });
   </script>
+
 
   </div>
 </section>
