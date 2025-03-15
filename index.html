@@ -9,9 +9,10 @@
 
 
 
-
-  <!-- Swiper CSS -->
+<!-- Swiper CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
 
@@ -126,38 +127,24 @@
  
 <!-- Hero Section with Swiper.js -->
   <section class="relative hero-section">
-    <!-- Swiper Container -->
-    <div class="swiper-container h-full">
-      <div class="swiper-wrapper">
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="absolute inset-0">
-            <img src="images/swastikBanner.png" class="w-full h-full object-cover" alt="Swastik Banner 1">
-            <div class="absolute inset-0 bg-black bg-opacity-10"></div> <!-- Overlay for better text visibility -->
-          </div>
-          <div class="container mx-auto px-6 text-center relative z-10 flex flex-col items-center justify-center h-full">
-            
-            
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="absolute inset-0">
-            <img src="images/banner.png" class="w-full h-full object-cover" alt="Swastik Banner 2">
-            <div class="absolute inset-0 bg-black bg-opacity-10"></div> <!-- Overlay for better text visibility -->
-          </div>
-          <div class="container mx-auto px-6 text-center relative z-10 flex flex-col items-center justify-center h-full">
-            
-          </div>
-        </div>
-        <!-- Add more slides as needed -->
-      </div>
-      <!-- Add Pagination and Navigation Arrows -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next text-white"></div>
-      <div class="swiper-button-prev text-white"></div>
+   <!-- Swiper Container -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <img src="images/swastikBanner.png" class="w-full h-full object-cover" alt="Swastik Banner 1">
     </div>
-  </section>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <img src="images/banner.png" class="w-full h-full object-cover" alt="Swastik Banner 2">
+    </div>
+  </div>
+  <!-- Swiper Pagination and Navigation -->
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
 
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -166,9 +153,10 @@
     const swiper = new Swiper('.swiper-container', {
       loop: true, // Infinite loop
       autoplay: {
-        delay: 4000, // Change slide every 4 seconds
-        disableOnInteraction: false, // Continue autoplay even when user interacts
+        delay: 2000, // Change slide every 2 seconds
+        disableOnInteraction: false, // Keep autoplay after user interaction
       },
+      
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -177,7 +165,7 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    });
+    }); 
   </script>
 
   </div>
